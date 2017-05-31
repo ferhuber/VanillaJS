@@ -1,0 +1,92 @@
+body {background: -webkit-linear-gradient(-45deg, #f8fc00 0%,#f47f18 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #f8fc00 0%,#f47f18 100%);
+background-size: cover;
+background-repeat: no-repeat;
+height: 100vh;
+margin: 0}
+
+.player {
+  padding-top: 25vh;
+  overflow: hidden;
+
+}
+
+.viewer {
+  width: 40vw;
+  left: 30vw;
+  position: relative;
+  z-index: 0
+}
+
+.player_controls {
+  width: 40vw;
+  left: 30vw;
+  position: relative;
+  bottom: 50px;
+  display: block;
+  z-index: 10;
+  background-color: rgba(10, 10, 10, 0.6);
+  overflow: hidden;
+  opacity: 0;
+  height: 45px;
+}
+
+.left  {
+  float: left;
+  margin-top: 8px;
+  margin-left: 4px;
+  }
+
+.right {float: right;
+  margin-top: 8px;
+  margin-right: 4px;
+  font-size: 15px!important;
+  }
+
+.show {
+  animation: fadein 2s;
+  opacity: 1
+}
+
+.hide {
+  animation: fadeout 2s;
+  opacity: 0
+}
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+.full_screen {
+  width: 100vw;
+  left: 0;
+  padding-top: 0;
+
+}
+
+.screen {
+  float: right;
+}
+
+.progress {
+  flex: 10;
+  position: relative;
+  height: 5px;
+  background: black;
+  margin-top: 4px;
+}
+
+.progress_filled {
+  width: 0;
+  background: #ffc600;
+  flex: 0;
+  z-index: 1;
+  height: 5px;
+}

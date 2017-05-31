@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 4em;
+  color: #ffdf00;
+}
+
+body {
+  /* IE10+ */
+background-image: -ms-linear-gradient(top left, #2652FF 0%, #996EFF 100%);
+
+/* Mozilla Firefox */
+background-image: -moz-linear-gradient(top left, #2652FF 0%, #996EFF 100%);
+
+/* Opera */
+background-image: -o-linear-gradient(top left, #2652FF 0%, #996EFF 100%);
+
+/* Webkit (Safari/Chrome 10) */
+background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #2652FF), color-stop(100, #996EFF));
+
+/* Webkit (Chrome 11+) */
+background-image: -webkit-linear-gradient(top left, #2652FF 0%, #996EFF 100%);
+
+}
+
+#Portfolio {
+  height: auto;
+  text-align: center;
+  position: relative;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.sites {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 95%;
+  max-width: 1196px;
+  position: relative;
+}
+
+.works {
+  margin-bottom: 20px;
+}
+
+.col {
+  border-left-width: 24px!important;
+  padding: 0 0px;
+  border: 0px solid rgba(0,0,0,0);
+  float: left;
+  box-sizing: border-box;
+  background-clip: padding-box !important;
+  width: 33.3%;
+}
+
+.section {
+  overflow: hidden;
+}
+
+.work-item {
+  max-height: 200px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+
+.work-item img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  vertical-align: middle;
+}
+
+.work-item:hover .work-item-inside{
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.8s ease-out, visibility 0.5s ease-out;
+}
+
+.work-item-inside {
+  background-color: rgba(0, 0, 0, .8);
+  color: #fff;
+  display: block;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+  transition: opacity 0.3s ease-out, visibility 0.2s ease-out;
+}
+
+.work-item-inside a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.work-item-inside a:hover {
+  color: #ff7a00;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+#navcontainer {
+  position: relative;
+  padding-right: 25%;
+}
+
+#navlist2 {
+  list-style-type: none;
+  display: flex !important;
+  justify-content: center !important;
+  position: relative;
+}
+
+#navlist2 li {
+  display: list-item !important;
+  list-style-type: none;
+  position: relative;
+  margin: 0 1% 0 1%;
+  padding: 1% 2% 1%;
+  border-radius: 5px;
+}
+.code {
+  width: 100%;
+  margin-top: 5px;
+  display: inline-flex;
+  font-family: 'Abel', sans-serif;
+}
+
+.but {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 4%;
+  background-color: none;
+  border: 2px solid #ffffff;
+  color: rgba(230, 255, 0, 0.5);
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  cursor: pointer
+}
+
+.but:hover {
+  border: 2px solid #ff7a00;
+}
+
+.row { text-align: center;
+  position: relative;
+}
+
+
+/*                  Screen Settings                */
+
+@media (max-width:319px) {
+  #Portfolio    { height: inherit }
+  .col          { width: 94% }
+  .top          { display: none }
+  .git          { display: none }
+}
+
+@media (min-width:320px) and (max-width:479px) {
+  #Portfolio    { height: auto }
+  .col          { width: 94% }
+  .top          { display: none }
+  .git          { display: none }
+}
+
+@media (min-width:480px) and (max-width:767px) {
+  #Portfolio    { height: inherit }
+  .col          { width: 47% }
+  .top          { display: none }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+  #Portfolio     { height: inherit }
+  .sites         { width: 80% }
+  .col           { width: 50% }
+  .f1            { width: 95%!important }
+  .top           { display: none }
+}
+
+@media (min-width:1025px) and (max-width:1279px) {
+  .portfolio     sound_kit{ margin-top: 21vh }
+}

@@ -1,0 +1,50 @@
+body { background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);}
+
+.row {display: flex;
+  justify-content: center;}
+
+.clock {
+  width: 210px;
+  height: 210px;
+  border: solid 10px;
+  border-radius: 999px;
+  border-color: rgba(158, 158, 158, 0.69);
+  position: absolute;
+  left: 44%;
+  top: 32%;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%);
+}
+
+.hand {
+  margin: 0;
+  position: absolute;
+  margin-top: 50%;
+  transition: all 0.05s;
+  transform-origin: 100%;
+  border-radius: 0 10px 10px 0;
+}
+
+.hours {
+  width: 30%;
+  height: 4px;
+  right: 50%;
+  background-color: black;
+  transform: rotate(90deg);
+}
+
+.minutes {
+  width: 48%;
+  height: 2px;
+  right: 50%;
+  background-color: black;
+  transform: rotate(90deg);
+}
+
+.seconds {
+  width: 48%;
+  height: 1px;
+  right: 50%;
+  background-color: red;
+  transform: rotate(90deg);
+  transition-timing-function: cubic-bezier(0.01, 3.21, 0.58, 1);
+}

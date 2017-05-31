@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cheking Multiples Checkboxes</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="item">
+          <input type="checkbox">
+          <p>This is an inbox layout.</p>
+        </div>
+        <div class="item">
+          <input type="checkbox">
+          <p>Check one item.</p>
+        </div>
+        <div class="item">
+          <input type="checkbox">
+          <p>Hold down your Shift Key.</p>
+        </div>
+        <div class="item">
+          <input type="checkbox">
+          <p>Check a lower item.</p>
+        </div>
+        <div class="item">
+          <input type="checkbox">
+          <p>Everything in between should also be set to checked.</p>
+        </div>
+        <div class="item">
+          <input type="checkbox">
+          <p>Made without any libraries.</p>
+        </div>
+        <div class="item">
+          <input type="checkbox">
+          <p>Just regular JavaScript.</p>
+        </div>
+        <div class="item">
+          <input type="checkbox">
+          <p>Interesting...</p>
+        </div>
+        <div class="item">
+          <input type="checkbox">
+          <p>Bye.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+      const checkboxes = document.querySelectorAll('.row input[type="checkbox"]');
+      let lastChecked;
+      let inBetween = false;
+
+      function handleCheck(e){
+        // e.srcElement.nextSibling.nextSibling.style.textDecoration= 'line-through';
+// console.log(e.srcElement.style.backgroundColor= "red");
+        if(e.shiftKey && this.checked) {
+          checkboxes.forEach(checkbox => {
+            if(checkbox === this || checkbox === lastChecked) {
+              inBetween = !inBetween;
+            }
+            if(inBetween){
+              checkbox.checked = true;
+            }
+          });
+        }
+        lastChecked = this;
+        updateText();
+      };
+
+    function updateText(){
+      for (let i = 0 ; i < checkboxes.length; i ++){
+        if (checkboxes[i].checked === true){
+          checkboxes[i].nextSibling.nextSibling.style.textDecoration= 'line-through';
+          checkboxes[i].parentElement.style.backgroundColor= '#f9f7f9';
+
+        }
+        else {
+          checkboxes[i].nextSibling.nextSibling.style.textDecoration= 'none';
+          checkboxes[i].parentElement.style.backgroundColor= 'white'
+        }
+      }
+    }
+
+      checkboxes.forEach(checkbox => checkbox.addEventListener('click',handleCheck));
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,43 @@
+body { background-image: url(../img/restaurant.jpg);
+padding-top: 20vh}
+
+ul   { list-style-type: none }
+
+
+.wrapper {
+  background-color: white;
+  width: 300px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0px 0px 20px 6px #1d1c1c;
+  padding: 2% 0 2%
+}
+
+.wrapper ul { text-align: left;}
+
+ /*input[type=checkbox] {
+  display: none;
+}
+ input[type=checkbox] + label:before {
+  content: '◻️';
+  margin-right: 10px;
+  display: inline-block;
+}
+ input[type=checkbox]:checked + label:before {
+  content '🌮';
+  display: inline-block;
+}*/
+
+
+.add-items {
+  margin-top: 20px;
+}
+
+.add-items input {
+  padding: 10px;
+  outline: 0;
+  border:1px solid rgba(0,0,0,0.1)
+}
